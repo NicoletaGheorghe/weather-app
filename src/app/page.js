@@ -1,9 +1,8 @@
 
-
 export default function Home() {
   return (
     <div>
-      Hello world
+      making a change, for once.
     </div>
   );
 }
