@@ -11,7 +11,7 @@ export default function Home() {
         <p className="text-gray-500 mb-4">
           Choose locations
         </p>
-        <div className="flex"><WeatherFetcher />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10"><WeatherFetcher />
         <WeatherFetcher />
         
         <WeatherFetcher />
