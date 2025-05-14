@@ -7,14 +7,14 @@ export default function WeatherDisplay({
 
   if (loading) return <div className="text-center">Loading...</div>;
 
-  return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-6/8 mx-auto">
+  return (  
+    <div className="justify-center grid grid-cols gap-6 mx-5">
       {forecast.map((day, index) => {
         const isToday = day.date === today;
         return (
           <div
             key={index}
-            className={`${isToday ? 'bg-white ' : 'bg-gray-400'} p-4 rounded-lg shadow-md shadow-gray-600`}
+            className={`${isToday ? 'bg-white' : 'bg-gray-400'} p-4 rounded-lg shadow-md shadow-gray-600`}
           >
             <h3 className="font-bold text-2xl text-indigo-800 mb-1">
               {new Date(day.date).toDateString()}

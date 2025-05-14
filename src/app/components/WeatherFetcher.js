@@ -53,6 +53,7 @@ export default function WeatherFetcher() {
 
   return (
     <>
+    <div className="flex flex-col">
       {error && <div className="text-red-500">{error}</div>}
       <LocationSelect
         selectedLocation={selectedLocation}
@@ -63,6 +64,7 @@ export default function WeatherFetcher() {
         forecast={dailyForecast}
         currentTemperature={currentTemperature}
       />
+      </div>
     </>
   );
 }
