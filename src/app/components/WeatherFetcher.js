@@ -35,6 +35,7 @@ export default function WeatherFetcher() {
           max: data.daily.temperature_2m_max[index],
           uv: data.daily.uv_index_max[index],
           wind: data.daily.wind_speed_10m_max[index],
+          code: data.daily.weathercode[index],
         }));
 
         setDailyForecast(forecastArray);
