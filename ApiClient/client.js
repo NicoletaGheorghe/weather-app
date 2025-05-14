@@ -29,7 +29,7 @@ export default class ApiClient {
             longitude,
             current: "temperature",
             hourly: "temperature_2m",
-            daily: "temperature_2m_min,temperature_2m_max,uv_index_max,wind_speed_10m_max,weather_code",
+            daily: "temperature_2m_min,temperature_2m_max,uv_index_max,wind_speed_10m_max,weathercode",
             forecast_days: "7",
         };
         return this.getRequest(weather_base_url, params);
