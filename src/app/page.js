@@ -12,9 +12,12 @@ export default function Home() {
           Choose locations
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10"><WeatherFetcher />
-        <WeatherFetcher />
-        
-        <WeatherFetcher />
+          <div className="hidden md:block">
+            <WeatherFetcher />
+          </div>
+          <div className="hidden lg:block">
+           <WeatherFetcher />
+          </div>
         </div>
       </div>
     </main>

@@ -36,7 +36,7 @@ export default function WeatherDisplay({
             </h3>
             <img src={weather.icon} alt={weather.label} title={weather.label} className="w-22 h-20 mb-2 place-self-center"/>
             {isToday && currentTemperature !== null && (
-              <p className="text-indigo-800 font-bold mb-2">Current temperature:
+              <p className="text-indigo-800 font-bold mb-2">{weather.label} &nbsp;
                 {currentTemperature}°C
               </p>
             )}
