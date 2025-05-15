@@ -29,18 +29,18 @@ export default function WeatherDisplay({
         return (
           <div
             key={index}
-            className={`${isToday ? 'bg-white' : 'bg-gray-400'} p-4 rounded-lg shadow-md shadow-gray-600`}
+            className={`${isToday ? 'bg-gray-600' : 'bg-gray-800'} p-4 rounded-lg shadow-md`}
           >
-            <h3 className="font-bold text-2xl text-indigo-800 mb-1">
+            <h3 className="font-bold text-2xl text-gray-100 mb-1">
               {new Date(day.date).toDateString()}
             </h3>
             <img src={weather.icon} alt={weather.label} title={weather.label} className="w-22 h-20 mb-2 place-self-center"/>
             {isToday && currentTemperature !== null && (
-              <p className="text-indigo-800 font-bold mb-2">{weather.label} &nbsp;
+              <p className="text-gray-100 font-bold mb-2">{weather.label} &nbsp;
                 {currentTemperature}°C
               </p>
             )}
-            <div className={`grid grid-cols-2 gap-2 font-semibold text-zinc-700`}>
+            <div className={`grid grid-cols-2 gap-2 font-semibold text-gray-100`}>
               <p>Min Temp: {day.min}°C</p>
               <p>Max Temp: {day.max}°C</p>
               <p>UV Index: {day.uv}</p>
