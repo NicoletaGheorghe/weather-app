@@ -6,7 +6,7 @@ export default function LocationSelect({
     <select
       value={selectedLocation}
       onChange={(e) => setSelectedLocation(e.target.value)}
-      className=" mb-6 p-2 shadow-md shadow-gray-600 rounded-lg bg-white text-indigo-800 font-bold grid grid-cols gap-6 mx-5 outline-none"
+      className=" mb-6 p-2 shadow-md shadow-gray-600 rounded-lg bg-gray-600 text-gray-100 font-bold grid grid-cols gap-6 mx-5 outline-none"
     >
       <option value="">Select a city</option>
       <option value="London">London</option>
