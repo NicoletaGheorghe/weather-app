@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
 
-## Getting Started
+# 7-Day Weather App
 
-First, run the development server:
+A sleek, responsive weather forecast app built with **Next.js** and **TailwindCSS**, allowing users to search for weather in up to three different cities at once and view a detailed 7-day forecast powered by [Open-Meteo](https://open-meteo.com/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* View 7-day weather forecasts for **up to three cities** simultaneously
+* Three independent search bars for easy city selection
+* Fully responsive UI for desktop, tablet, and mobile
+* Live weather data via the Open-Meteo API
+* Clean, modern design with TailwindCSS styling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Styling:** [TailwindCSS](https://tailwindcss.com/)
+* **Data Source:** [Open-Meteo API](https://open-meteo.com/)
+* **Deployment:** [Vercel](https://vercel.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How it Works
 
-## Deploy on Vercel
+1. The user types a city name into any of the three search bars.
+2. The app fetches geolocation data for the city, then calls Open-Meteo's forecast API.
+3. It then displays a 7-day weather forecast including temperature highs/lows, wind speed, and weather conditions.
+4. Each column works independently, allowing comparison between locations in real time.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Links
+
+* 🌐 Live Demo: https://weather-app-wine-phi-95.vercel.app/
+* 📦 GitHub Repo: https://github.com/NicoletaGheorghe/weather-app.git
+
+---
+
+## Credits
+
+* Weather data provided by [Open-Meteo](https://open-meteo.com/)
+* Built with [Next.js](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/)
+* Co-created by Nicoleta Gheorghe and Viggs Verikas
+
+---
+
