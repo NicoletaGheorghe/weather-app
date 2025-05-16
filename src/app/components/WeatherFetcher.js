@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import ApiClient from "../../../ApiClient/client";
-import LocationSelect from "./LocationSelect";
+//import LocationSelect from "./LocationSelect";
 import WeatherDisplay from "./WeatherDisplay";
 
 export default function WeatherFetcher() {
@@ -36,10 +36,12 @@ export default function WeatherFetcher() {
           uv: data.daily.uv_index_max[index],
           wind: data.daily.wind_speed_10m_max[index],
           code: data.daily.weathercode[index],
+          precip: data.daily.precipitation_probability_mean[index],
         }));
 
         setDailyForecast(forecastArray);
         setCurrentTemperature(data.current.temperature_2m);
+      
       }
     } catch (error) {
       setError("Something went wrong. Mistakes happen.");
@@ -50,20 +52,29 @@ export default function WeatherFetcher() {
 
   useEffect(() => {
     fetchLocation();
-  }, [selectedLocation]);
+    setSelectedLocation("London");
+  }, []);
 
   return (
     <>
     <div className="flex flex-col">
       {error && <div className="text-red-500">{error}</div>}
-      <LocationSelect
-        selectedLocation={selectedLocation}
-        setSelectedLocation={setSelectedLocation}
-      />
+      <div className="flex place-self-center bg-white rounded-md p-2 mb-5" >
+            <input
+                type="text"
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                onKeyDown={(e) => {if (e.key === "Enter") fetchLocation(); }}
+                placeholder="Enter city" 
+                className="font-semibold text-zinc-700 outline-none"
+            />
+            <button onClick={fetchLocation} className="justify-self-end w-8">🔍</button>
+         </div>
       <WeatherDisplay
         loading={loading}
         forecast={dailyForecast}
         currentTemperature={currentTemperature}
+        
       />
       </div>
     </>
