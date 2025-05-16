@@ -10,7 +10,7 @@ export default function WeatherDisplay({
   if (loading) return <div className="text-center">Loading...</div>;
 
   return (  
-    <div className="justify-center grid grid-cols gap-4">
+    <div className="mx-2 grid grid-cols gap-6">
       {forecast.map((day, index) => {
         const isToday = day.date === today;
         const weather = getIcon(day.code);
